@@ -11,47 +11,46 @@ import Title from './Title';
 function createData(
     id: number,
     date: string,
-    name: string,
-    shipTo: string,
-    paymentMethod: string,
-    amount: number,
+    USD: string,
+    EUR: string,
+    RUB: string,
 ) {
-    return { id, date, name, shipTo, paymentMethod, amount };
+    return { id, date, USD, EUR, RUB, };
 }
 
 const rows = [
     createData(
         0,
         '16 Mar, 2019',
-        'Elvis Presley',
-        'Tupelo, MS',
-        'VISA ⠀•••• 3719',
-        312.44,
+        '2.61',
+        '2.7',
+        '3.2',
     ),
     createData(
         1,
-        '16 Mar, 2019',
-        'Paul McCartney',
-        'London, UK',
-        'VISA ⠀•••• 2574',
-        866.99,
+        '17 Mar, 2019',
+        '2.7',
+        '2.8',
+        '3.3',
     ),
-    createData(2, '16 Mar, 2019', 'Tom Scholz', 'Boston, MA', 'MC ⠀•••• 1253', 100.81),
+    createData(2,
+        '18 Mar, 2019',
+        '2.5',
+        '2.6',
+        '3.4', ),
     createData(
         3,
-        '16 Mar, 2019',
-        'Michael Jackson',
-        'Gary, IN',
-        'AMEX ⠀•••• 2000',
-        654.39,
+        '19 Mar, 2019',
+        '2.3',
+        '2.4',
+        '3.15',
     ),
     createData(
         4,
-        '15 Mar, 2019',
-        'Bruce Springsteen',
-        'Long Branch, NJ',
-        'VISA ⠀•••• 5919',
-        212.79,
+        '20 Mar, 2019',
+        '2.8',
+        '2.9',
+        '3.6',
     ),
 ];
 
@@ -62,25 +61,23 @@ function preventDefault(event: React.MouseEvent) {
 export default function Orders() {
     return (
         <React.Fragment>
-            <Title>Recent Orders</Title>
+            <Title>Latest exchange rates</Title>
             <Table size="small">
                 <TableHead>
                     <TableRow>
                         <TableCell>Date</TableCell>
-                        <TableCell>Name</TableCell>
-                        <TableCell>Ship To</TableCell>
-                        <TableCell>Payment Method</TableCell>
-                        <TableCell align="right">Sale Amount</TableCell>
+                        <TableCell>USD</TableCell>
+                        <TableCell>EUR</TableCell>
+                        <TableCell>RUB</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {rows.map((row) => (
                         <TableRow key={row.id}>
                             <TableCell>{row.date}</TableCell>
-                            <TableCell>{row.name}</TableCell>
-                            <TableCell>{row.shipTo}</TableCell>
-                            <TableCell>{row.paymentMethod}</TableCell>
-                            <TableCell align="right">{`$${row.amount}`}</TableCell>
+                            <TableCell>{row.USD}</TableCell>
+                            <TableCell>{row.EUR}</TableCell>
+                            <TableCell>{row.RUB}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
