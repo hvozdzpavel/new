@@ -109,7 +109,7 @@ function DashboardContent() {
                             noWrap
                             sx={{ flexGrow: 1 }}
                         >
-                            Exchange operator
+                           Operations list
                         </Typography>
                     </Toolbar>
                 </AppBar>
@@ -147,11 +147,6 @@ function DashboardContent() {
                     <Toolbar />
                     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                         <Grid container spacing={3}>
-                            <Grid item xs={12}>
-                                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                                    <CurrencyInput />
-                                </Paper>
-                            </Grid>
                             {/* Recent Orders */}
                             <Grid item xs={12}>
                                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
@@ -166,6 +161,6 @@ function DashboardContent() {
     );
 }
 
-export default function Admin() {
-    return <DashboardContent />;
+export default function OperationsList() {
+    return <DashboardContent/>;
 }
