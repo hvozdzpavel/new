@@ -7,17 +7,18 @@ import LayersIcon from '@mui/icons-material/Layers';
 
 export const mainListItems = (
     <React.Fragment>
-        <ListItemButton>
+        <ListItemButton onClick={() => window.location.assign(" admin")}>
             <ListItemIcon>
                 <BarChartIcon />
             </ListItemIcon>
             <ListItemText primary="Currency form" />
         </ListItemButton>
-        <ListItemButton>
+        <ListItemButton onClick={() => window.location.assign(" OperationsList")}>
             <ListItemIcon>
                 <LayersIcon />
             </ListItemIcon>
             <ListItemText primary="Operations list" />
         </ListItemButton>
+
     </React.Fragment>
 );
