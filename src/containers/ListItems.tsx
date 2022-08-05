@@ -4,16 +4,17 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
+import {Link} from "react-router-dom";
 
 export const mainListItems = (
     <React.Fragment>
-        <ListItemButton onClick={() => window.location.assign(" admin")}>
+        <ListItemButton component={Link} to="/admin">
             <ListItemIcon>
                 <BarChartIcon />
             </ListItemIcon>
             <ListItemText primary="Currency form" />
         </ListItemButton>
-        <ListItemButton onClick={() => window.location.assign(" OperationsList")}>
+        <ListItemButton component={Link} to="/OperationsList">
             <ListItemIcon>
                 <LayersIcon />
             </ListItemIcon>
