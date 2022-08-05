@@ -4,6 +4,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import {Link} from "react-router-dom";
 
 export const mainListItems = (
@@ -20,6 +21,11 @@ export const mainListItems = (
             </ListItemIcon>
             <ListItemText primary="Operations list" />
         </ListItemButton>
-
+        <ListItemButton component={Link} to="/ ">
+            <ListItemIcon>
+                <ExitToAppIcon />
+            </ListItemIcon>
+            <ListItemText primary="Exit" />
+        </ListItemButton>
     </React.Fragment>
 );
