@@ -5,10 +5,8 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import StarIcon from '@mui/icons-material/StarBorder';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
@@ -18,8 +16,8 @@ import InputUser from "./InputUser";
 import Orders from "./Orders";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import CourceTable from "./TransactionsTable";
 import TransactionsTable from "./TransactionsTable";
+import {Link as LinkRouter} from "react-router-dom";
 function Copyright(props: any) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -61,12 +59,13 @@ function PricingContent() {
                     <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
                         User page
                     </Typography>
-                    <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+                    <Button component={LinkRouter} to="/" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
                         <ListItemIcon>
                             <ExitToAppIcon />
                         </ListItemIcon>
                         EXIT
                     </Button>
+
                 </Toolbar>
             </AppBar>
             {/* Hero unit */}
