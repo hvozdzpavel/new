@@ -9,7 +9,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
 import InputUser from "./InputUser";
@@ -18,18 +17,6 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import TransactionsTable from "./TransactionsTable";
 import {Link as LinkRouter} from "react-router-dom";
-function Copyright(props: any) {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center" {...props}>
-            {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
 
 const tiers = [
 
@@ -69,7 +56,7 @@ function PricingContent() {
                 </Toolbar>
             </AppBar>
             {/* Hero unit */}
-            <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
+            <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 3, pb: 6 }}>
                 <Orders />
                 <InputUser />
 
@@ -135,13 +122,12 @@ function PricingContent() {
                 maxWidth="md"
                 component="footer"
                 sx={{
-                    borderTop: (theme) => `10px solid ${theme.palette.divider}`,
+                    borderTop: (theme) => `5px solid ${theme.palette.divider}`,
                     mt: 4,
                     py: [3, 6],
                 }}
             >
                 <TransactionsTable/>
-                <Copyright sx={{ mt: 5 }} />
             </Container>
             {/* End footer */}
         </React.Fragment>

@@ -79,7 +79,7 @@ export default function TransactionsTable() {
                 </TableBody>
             </Table>
             <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
-                See more orders
+                See more operations
             </Link>
         </React.Fragment>
     );

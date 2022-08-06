@@ -13,7 +13,7 @@ export const mainListItems = (
             <ListItemIcon>
                 <BarChartIcon />
             </ListItemIcon>
-            <ListItemText primary="Currency form" />
+            <ListItemText primary="Сurrency input" />
         </ListItemButton>
         <ListItemButton component={Link} to="/OperationsList">
             <ListItemIcon>

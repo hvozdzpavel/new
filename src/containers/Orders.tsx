@@ -61,7 +61,7 @@ function preventDefault(event: React.MouseEvent) {
 export default function Orders() {
     return (
         <React.Fragment>
-            <Title>Latest exchange rates</Title>
+            <Title>Exchange rates</Title>
             <Table size="small">
                 <TableHead>
                     <TableRow>
@@ -83,7 +83,7 @@ export default function Orders() {
                 </TableBody>
             </Table>
             <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
-                See more orders
+                See more operations
             </Link>
         </React.Fragment>
     );
