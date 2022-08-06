@@ -19,6 +19,8 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems } from './ListItems';
 import Orders from "./Orders";
 import CurrencyInput from "./CurrencyInput";
+import CourceTable from "./TransactionsTable";
+import TransactionsTable from "./TransactionsTable";
 
 
 
@@ -150,7 +152,7 @@ function DashboardContent() {
                             {/* Recent Orders */}
                             <Grid item xs={12}>
                                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                                    <Orders />
+                                    <TransactionsTable />
                                 </Paper>
                             </Grid>
                         </Grid>

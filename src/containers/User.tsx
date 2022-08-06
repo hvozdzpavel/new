@@ -15,6 +15,11 @@ import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
 import InputUser from "./InputUser";
+import Orders from "./Orders";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import CourceTable from "./TransactionsTable";
+import TransactionsTable from "./TransactionsTable";
 function Copyright(props: any) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -40,12 +45,6 @@ const tiers = [
         buttonVariant: 'outlined',
     },
 ];
-const footers = [
-    {
-        title: 'Legal',
-        description: [ 'Terms of use'],
-    },
-];
 
 function PricingContent() {
     return (
@@ -62,23 +61,17 @@ function PricingContent() {
                     <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
                         User page
                     </Typography>
-                    <nav>
-                        <Link
-                            variant="button"
-                            color="text.primary"
-                            href="#"
-                            sx={{ my: 1, mx: 1.5 }}
-                        >
-                            Support
-                        </Link>
-                    </nav>
                     <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
-                        Login
+                        <ListItemIcon>
+                            <ExitToAppIcon />
+                        </ListItemIcon>
+                        EXIT
                     </Button>
                 </Toolbar>
             </AppBar>
             {/* Hero unit */}
             <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
+                <Orders />
                 <InputUser />
 
             </Container>
@@ -143,29 +136,12 @@ function PricingContent() {
                 maxWidth="md"
                 component="footer"
                 sx={{
-                    borderTop: (theme) => `1px solid ${theme.palette.divider}`,
-                    mt: 8,
+                    borderTop: (theme) => `10px solid ${theme.palette.divider}`,
+                    mt: 4,
                     py: [3, 6],
                 }}
             >
-                <Grid container spacing={4} justifyContent="space-evenly">
-                    {footers.map((footer) => (
-                        <Grid item xs={6} sm={3} key={footer.title}>
-                            <Typography variant="h6" color="text.primary" gutterBottom>
-                                {footer.title}
-                            </Typography>
-                            <ul>
-                                {footer.description.map((item) => (
-                                    <li key={item}>
-                                        <Link href="#" variant="subtitle1" color="text.secondary">
-                                            {item}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </Grid>
-                    ))}
-                </Grid>
+                <TransactionsTable/>
                 <Copyright sx={{ mt: 5 }} />
             </Container>
             {/* End footer */}
